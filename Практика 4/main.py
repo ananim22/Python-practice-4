@@ -9,8 +9,8 @@ def create_file():
 
     while True:
         print("1 - написати власний рядок.\n" \
-              "2 - вибрати рядок за замовчуванням.\n" \
-              "Ваш вибір: ", end="")
+            "2 - вибрати рядок за замовчуванням.\n" \
+            "Ваш вибір: ", end="")
         choice = input()
 
         if choice == '1':
@@ -71,3 +71,14 @@ process_files()
 
 # Для Міхальова М. О.
 # Додати функцію яка читає вміст файлу TF7_2 і друкує його по рядках в консоль.
+
+def print_second_file():
+    try:
+        file2 = open("Практика 4/TF7_2.txt", "r", encoding="utf-8")
+        for line in file2:
+            print(line, end="")
+    except Exception as e: 
+        print(f"Помилка під час відкриття файлу TF7_2.txt - {e}")
+        return
+
+print_second_file()
